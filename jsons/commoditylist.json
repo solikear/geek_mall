@@ -1,0 +1,162 @@
+{
+    "content": [
+    {
+    "id": "de45a9b7fc2a4490993c065b7e0228e4",
+    "title": "小米9 Pro 5G 骁龙855Plus 30W无线闪充 8GB+256GB 梦之白 双卡全网通 全面屏拍照智能新品游戏手机",
+    "skus": [
+    {
+    "id": "813b9193f3744f4db452b2854b271a08",
+    "price": 2599,
+    "stock": 99,
+    "sale": 0,
+    "specs": [
+    {
+    "颜色": "魅夜蓝"
+    },
+    {
+    "内存": "64GB"
+    }
+    ]
+    },
+    {
+    "id": "6c62da9198654438b6429f364f6153c1",
+    "price": 3799.99,
+    "stock": 99,
+    "sale": 0,
+    "specs": [
+    {
+    "颜色": "梦之白"
+    },
+    {
+    "内存": "256GB"
+    }
+    ]
+    }
+    ],
+    "description": "这是一个农民最爱手机..",
+    "cate": "电子/手机",
+    "status": "u",
+    "postFee": 8,
+    "createTime": "2019-12-09 19:21:42",
+    "image": "/image/dd5ca18ed6bd48578ebbddb3c8890403.jpg",
+    "banners": [
+    "/image/900d9d19716b46dd8e1f0274b2487ae9.jpg",
+    "/image/25e0f6554624489dbf98c7b952a0da1e.jpg"
+    ]
+    },
+    {
+    "id": "76c3d76d071949db9f1f00191ac51871",
+    "title": "Apple iPhone 11 (A2223) 128GB 黑色 移动联通电信4G手机 双卡双待",
+    "skus": [
+    {
+    "id": "738adab11f5e4cbcb19af3d0c4281954",
+    "price": 7666,
+    "stock": 99,
+    "sale": null,
+    "specs": [
+    {
+    "颜色": "中国红"
+    },
+    {
+    "内存": "256GB"
+    }
+    ]
+    },
+    {
+    "id": "20e92d10739648b380a9a0015b474782",
+    "price": 6666,
+    "stock": 99,
+    "sale": null,
+    "specs": [
+    {
+    "颜色": "暗紫色"
+    },
+    {
+    "内存": "512GB"
+    }
+    ]
+    }
+    ],
+    "description": "这是一个好用手机",
+    "cate": "电子/手机",
+    "status": "u",
+    "postFee": 8,
+    "createTime": "2019-12-09 19:18:30",
+    "image": "/image/8bbd3786db4d4173a8f1071e33b8a8ed.png",
+    "banners": [
+    "/image/139c3d3f3e85456abbd08f180e411a03.jpg",
+    "/image/34b50fc7a3d8450ca616a105d7c864cd.png",
+    "/image/97a515ecfae14b48a20754eec6971f77.jpg"
+    ]
+    },
+    {
+    "id": "18dc1c25d568499bb7bf01f1f082ba96",
+    "title": "华为Mate30 128GB 炫耀黑 移动联通电信4G手机 双卡双待",
+    "skus": [
+    {
+    "id": "3604aa80d8d2430db085569de7978a0c",
+    "price": 66,
+    "stock": 99,
+    "sale": 0,
+    "specs": [
+    {
+    "颜色": "暗黑色"
+    },
+    {
+    "内存": "64GB"
+    }
+    ]
+    },
+    {
+    "id": "35e8e70180774f889a21060607858c3b",
+    "price": 188,
+    "stock": 99,
+    "sale": 0,
+    "specs": [
+    {
+    "颜色": "大白色"
+    },
+    {
+    "内存": "128GB"
+    }
+    ]
+    }
+    ],
+    "description": "这是一个中国最强手机..",
+    "cate": "电子/手机",
+    "status": "u",
+    "postFee": 8,
+    "createTime": "2019-12-09 19:18:20",
+    "image": "/image/17d1d2bec5674d2896b7c711b8ea1713.jpg",
+    "banners": [
+    "/image/286ce6515dd4422e93a75f43bee4c59b.jpg",
+    "/image/d4d1f513116a42db9c4701c5d137f388.jpg"
+    ]
+    }
+    ],
+    "pageable": {
+    "sort": {
+    "sorted": true,
+    "unsorted": false,
+    "empty": false
+    },
+    "offset": 0,
+    "pageSize": 10,
+    "pageNumber": 0,
+    "paged": true,
+    "unpaged": false
+    },
+    "totalElements": 3,
+    "last": true,
+    "totalPages": 1,
+    "numberOfElements": 3,
+    "first": true,
+    "size": 10,
+    "number": 0,
+    "sort": {
+    "sorted": true,
+    "unsorted": false,
+    "empty": false
+    },
+    "empty": false
+    }
