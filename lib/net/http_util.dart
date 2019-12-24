@@ -4,33 +4,45 @@ import 'package:geek_mall/common/api.dart';
 
 class HttpUtil {
   static final HttpUtil _instance = HttpUtil._internal();
-    Dio _dio;
-    factory HttpUtil() => _instance;
-  
-    HttpUtil._internal() {
-      if(_dio == null){
-        var options = BaseOptions(
+  Dio _dio;
+  factory HttpUtil() => _instance;
+
+  HttpUtil._internal() {
+    if (_dio == null) {
+      var options = BaseOptions(
           baseUrl: API.BASE_URL,
           receiveTimeout: 10000,
           connectTimeout: 5000,
-          responseType: ResponseType.json
-        );
-        _dio = Dio(options);
-      }
+          responseType: ResponseType.json);
+      _dio = Dio(options);
     }
-    Future<Map<String,dynamic>> get(String path,[Map<String,dynamic> params]) async{
-      Response<Map<String,dynamic>> response;
-      if(params != null){
-        response = await _dio.get(path,queryParameters: params);
-      }else{
-        response = await _dio.get(path);
-      }
-      if(response.statusCode ==200){
-        return response.data;
-      }else{
-        LogUtil.e("请求出错");
-        return response.data;
-      }
+  }
+  Future<Map<String, dynamic>> get(String path,
+      [Map<String, dynamic> params]) async {
+    Response<Map<String, dynamic>> response;
+    if (params != null) {
+      response = await _dio.get(path, queryParameters: params);
+    } else {
+      response = await _dio.get(path);
     }
-  
+    if (response.statusCode == 200) {
+      return response.data;
+    } else {
+      LogUtil.e("请求出错");
+      return response.data;
+    }
+  }
+
+  Future postdata(String url, {Map<String, dynamic> params, options}) async {
+    try {
+      var respose =
+          await _dio.post(url, queryParameters: params, options: options);
+      print(respose.data);
+      return respose.data;
+    } on DioError catch (a) {
+      print(a.response.statusCode);
+      return a.response.statusCode;
+      //  Register.fromJson(a.response);
+    }
+  }
 }

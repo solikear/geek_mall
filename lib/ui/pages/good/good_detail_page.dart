@@ -147,12 +147,76 @@ class _GoodsDetailPageState extends State<GoodsDetailPage> {
                   ],
                 ),
               ),
-              ListView(
+            //  WebViewPage(),
+            Container(
+              color: Colors.white,
+              child: Column(
                 children: <Widget>[
-                  WebViewPage(),
+                  Image.network("https://img.alicdn.com/imgextra/i4/1714128138/O1CN018f4DO629zFkE1qyVj_!!1714128138.jpg"),
+                  
                 ],
-              )
+              ),
+            )
             ],
+          ),
+          Positioned(
+            child: Container(
+              width: double.infinity,
+              height: ScreenUtil().setHeight(150),
+              color: Color(0XFFfffffd),
+              child: Row(
+                children: <Widget>[
+                  IconButton(
+                    onPressed: (){},
+                    icon: Icon(CustomIcon.shop,size: 30.0,),
+                  ),
+                  IconButton(
+                    onPressed: (){},
+                    icon: Icon(CustomIcon.seller,size: 30.0,),
+                  ),
+                  IconButton(
+                    onPressed: (){},
+                    icon: Icon(CustomIcon.favorite,size: 30.0,),
+                  ),
+                  Spacer(),
+                  FlatButton(
+                    color: AppColors.shopYellow,
+                    onPressed: (){
+                      showModalBottomSheet(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return GoodSelectPage(
+                                goodDetail: _goodDetail,
+                              );
+                            });
+                    },
+                    child: Text("加入购物车"),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20.0),topLeft: Radius.circular(20.0))
+                    ),
+                  ),
+                  FlatButton(
+                    color: Colors.deepOrangeAccent,
+                    onPressed: (){
+                      showModalBottomSheet(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return GoodSelectPage(
+                                goodDetail: _goodDetail,
+                              );
+                            });
+                    },
+                    child: Text("立刻购买"),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(20.0),topRight: Radius.circular(20.0))
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  )
+                ],
+              ),
+            ),
           )
         ],
       ),

@@ -28,17 +28,22 @@ dependencies:
   #屏幕适配工具
   flutter_screenutil: ^0.7.0
   #json 自动转化工具 链接:https://github.com/flutterchina/json_model
-  # json_model: ^0.0.2
-  # build_runner: ^1.0.0
   json_annotation: ^3.0.0
-  # build_runner: ^1.7.2
-  # json_serializable: ^3.2.3
-  #dio 网络请求工具 链接:https://pub.flutter-io.cn/packages/dio#-installing-tab-
   dio: ^3.0.7
+  #加载动画插件
   flutter_spinkit: "^4.1.0"
+  #图片轮播插件
   flutter_swiper: ^1.1.6
-  cached_network_image: ^1.1.3
-  webview_flutter: 0.3.17
+  # 图片缓存
+  # cached_network_image: ^1.1.3
+  #webview flutter官方插件
+  webview_flutter: ^0.3.18+1
+  #状态管理
+  provider: ^3.2.0
+  # oauth插件
+  oauth2: ^1.5.0
+  shared_preferences: 0.5.4+8
+  extended_image: ^0.6.8
   # flutter_webview_plugin: ^0.3.10
 dev_dependencies:
   flutter_test:
@@ -76,9 +81,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: taobaoIconFont
+    - family: IconFont
       fonts:
-        - asset: assets/font/taobao/iconfont.ttf
+        - asset: assets/font/iconfont/iconfont.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

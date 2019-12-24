@@ -1,0 +1,100 @@
+{
+  "id": "1532210",
+  "name": "shop",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "101320",
+      "name": "退款",
+      "font_class": "tuikuan",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "577384",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e763",
+      "unicode_decimal": 59235
+    },
+    {
+      "icon_id": "632979",
+      "name": "待付款",
+      "font_class": "daifukuan",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "2681678",
+      "name": "待收货",
+      "font_class": "daishouhuo",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "3512889",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "4660091",
+      "name": "收 藏",
+      "font_class": "shoucang",
+      "unicode": "e772",
+      "unicode_decimal": 59250
+    },
+    {
+      "icon_id": "5213510",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "6172053",
+      "name": "待评价",
+      "font_class": "daipingjia",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "6215935",
+      "name": "客服",
+      "font_class": "xinfang-",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "6485338",
+      "name": "待发货",
+      "font_class": "daifahuo1",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    },
+    {
+      "icon_id": "6502779",
+      "name": "店铺",
+      "font_class": "dianpu",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "10222949",
+      "name": "店铺",
+      "font_class": "dianpu1",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "11367497",
+      "name": "home",
+      "font_class": "menu-home-normal",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

@@ -64,7 +64,7 @@ class _GoodsPageState extends State<GoodsPage>
                       physics: NeverScrollableScrollPhysics(),
                       itemCount: _goodList.length,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2, childAspectRatio: 0.68),
+                          crossAxisCount: 2, childAspectRatio: 0.61),
                       itemBuilder: (c, i) {
                         return _itemCard(_goodList[i]);
                       },
@@ -87,7 +87,7 @@ class _GoodsPageState extends State<GoodsPage>
           builder: (c) => GoodsDetailPage(goodId: id,)
         ));
   }
-
+  
   Widget _itemCard(Content goodContent) {
     String _goodImage = API.BASE_URL + goodContent.image;
     String _goodTitle = goodContent.title;
@@ -134,6 +134,7 @@ class _GoodsPageState extends State<GoodsPage>
                     child: Row(
                       children: <Widget>[
                         Container(
+                          height: ScreenUtil().setHeight(100),
                           padding: EdgeInsets.only(right: 70, left: 5),
                           child: Text(
                             '￥$_minPrice',

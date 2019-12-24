@@ -2,6 +2,7 @@ import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:geek_mall/common/custom_icon.dart';
 import 'package:geek_mall/ui/pages/category/category_page.dart';
+import 'package:geek_mall/ui/pages/good/confirm_page.dart';
 import 'package:geek_mall/ui/pages/good/detail_webview.dart';
 import 'package:geek_mall/ui/pages/good/goodlist_page.dart';
 import 'package:geek_mall/ui/test/test_dio.dart';
@@ -40,9 +41,9 @@ class _MainPageState extends State<MainPage> {
         physics: NeverScrollableScrollPhysics(),
         children: <Widget>[
           GoodsPage(),
-          CategoryPage(),
+          DioTestPage(),
           GoodsPage(),
-          WebViewPage(),
+          ConfirmPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

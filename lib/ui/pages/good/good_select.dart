@@ -50,20 +50,62 @@ class _GoodSelectPageState extends State<GoodSelectPage> {
         onTap: () {
           setState(() {
             currentitem = _valueList[i];
+            refreshWidget(i);
           });
         },
         child: Container(
           padding: EdgeInsets.all(5.0),
           // width: ScreenUtil().setWidth(50),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
-              border: Border.all(width: 0.5, color: Colors.black),
-              color: _valueList[i] == currentitem ? Colors.blue: null
-              ),
+            borderRadius: BorderRadius.all(Radius.circular(5.0)),
+            border: Border.all(width: 0.5, color: Colors.black),
+          ),
           child: Text(_valueList[i]),
         ),
       );
     });
+  }
+
+  void refreshWidget(int i) {
+    Widget selectWidget = GestureDetector(
+      onTap: () {
+        setState(() {
+          currentitem = _valueList[i];
+        });
+      },
+      child: Container(
+        padding: EdgeInsets.all(5.0),
+        // width: ScreenUtil().setWidth(50),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(5.0)),
+            border: Border.all(width: 0.5, color: Colors.black),
+            color: Colors.lightBlue),
+        child: Text(_valueList[i]),
+      ),
+    );
+    Widget def = GestureDetector(
+      onTap: () {
+        setState(() {
+          currentitem = _valueList[i];
+        });
+      },
+      child: Container(
+        padding: EdgeInsets.all(5.0),
+        // width: ScreenUtil().setWidth(50),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          border: Border.all(width: 0.5, color: Colors.black),
+        ),
+        child: Text(_valueList[i]),
+      ),
+    );
+    valueWidgetList[i] = selectWidget;
+    for (int j = 0; j < valueWidgetList.length; j++) {
+      if (j == i) {
+        continue;
+      }
+      valueWidgetList[j] = def;
+    }
   }
 
   @override
@@ -100,6 +142,10 @@ class _GoodSelectPageState extends State<GoodSelectPage> {
                       style: TextStyle(fontSize: 14.0, color: Colors.red),
                     ),
                     Text(
+                      "库存: 8件",
+                      style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                    ),
+                    Text(
                       "已选: $currentitem",
                       style: TextStyle(fontSize: 13.0, color: Colors.black),
                     ),
@@ -127,36 +173,61 @@ class _GoodSelectPageState extends State<GoodSelectPage> {
         ),
         Padding(
           padding: EdgeInsets.only(top: 2 * hrem, left: 5 * wrem),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text(keyName),
-              SizedBox(
-                height: 10.0,
-              ),
-              Wrap(
-                spacing: 8.0, // 主轴(水平)方向间距
-                runSpacing: 4.0,
-                children: valueWidgetList,
-              )
-            ],
+          child: Container(
+            width: double.infinity,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text(keyName),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Wrap(
+                  spacing: 8.0, // 主轴(水平)方向间距
+                  runSpacing: 4.0,
+                  children: valueWidgetList,
+                )
+              ],
+            ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 3 * hrem),
-          child: InkWell(
-            onTap: () {
-              Navigator.of(context).pop();
-            },
-            child: Container(
-              color: Colors.lightBlue,
-              height: 10 * hrem,
-              child: Center(
-                child: Text("确认"),
-              ),
-            ),
-          ),
+          padding: EdgeInsets.only(top: 20.0),
+          child: Container(
+              height: ScreenUtil().setHeight(130),
+              color: Colors.white,
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                    width: double.infinity,
+                    height: 0.5,
+                    color: Colors.grey[300],
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(colors: <Color>[
+                            Color(0XFFfd6f01),
+                            Color(0xfffe4c02)
+                          ]),
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      height: ScreenUtil().setHeight(100),
+                      width: double.infinity,
+                      child: Center(
+                        child: Text(
+                          "确定",
+                          style: TextStyle(color: Colors.white, fontSize: 13.0),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              )),
         )
       ],
     );
